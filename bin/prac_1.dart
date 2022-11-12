@@ -32,18 +32,17 @@ print("Нет");
 /*
 //
 //Задание 4
-//
 /*
 int a = 1;
 int summ = 0;
 print("Введите число-");
-int c = int.parse(stdin.readLineSync()!);
-while (a > 0){
+int b = int.parse(stdin.readLineSync()!);
+while (a > 0) {
 a = int.parse(stdin.readLineSync()!);
-if (a % c == 0) {
+if (a % b == 0) {
 summ += a;
 }
-}
 print(summ);
+}
 }
 /*
