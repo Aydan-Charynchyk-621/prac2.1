@@ -6,7 +6,7 @@ class Programm
 {
     static void Main(string[] args)
     {
-        /* 1 
+        /* 1 задание
         Console.Write("Введите J: ");
         string J = Console.ReadLine();
         Console.Write("Введите S: ");
@@ -21,46 +21,48 @@ class Programm
         }
         Console.WriteLine(count);*/
 
-        /* 2 задание 
+        /* 2 задание
         List<int> candidates = new List<int> {8, 7, 2, 5, 3, 1};
         int target = 10;
 
         show(candidates, target);
     }
 
-        static void show(List<int> candidates, int target)
+    
+    static void show(List<int> candidates, int target,int index)
+    {
+        Console.WriteLine("Цель: " + target);
+
+        for (int i = 0; i < candidates.Count; i++)
         {
-            for (int i = 0; i < candidates.Count; i++)
+            for (int j = 0; j < candidates.Count; j++)
             {
-                for (int j = 0; j < candidates.Count; j++)
+                if (candidates[i] + candidates[j] == target) // если сумма найдена
                 {
-                    if (candidates[i] + candidates[j] == target) // если сумма найдена
-                    {
-                        Console.WriteLine("Пара найдена (" + candidates[i] + ", " + candidates[j] + ")");
-                        return;
-                    }
+                    Console.WriteLine("Пара найдена (" + candidates[i] + ", " + candidates[j] + ")");
+
                 }
             }
-            Console.WriteLine("Пара не найдена");
         }*/
 
-        /* 3 zad
-        List<int> array = new List<int> {1, 2, 3, 4};
-        bool cont = false;
-        for (int i = 0; i < array.Count; i++)
+    /* 3 задание
+    List<int> array = new List<int> {1, 2, 3, 4, 1, 4};
+    bool cont = false;
+    
+    for (int i = 0; i < array.Count; i++)
+    {
+        for (int j = 0; j < array.Count; j++)
         {
-            for (int j = 0; j < array.Count; j++)
+            if (i != j) // eсли не равны
             {
-                if (i != j)
+                if(array[i] == array[j])
                 {
-                    if(array[i] == array[j])
-                    {
-                        cont = true;
-                        break;
-                    }
+                    cont = true;
+                    break;
                 }
             }
         }
-        Console.WriteLine(cont);*/
+    }
+    Console.WriteLine(cont);*/
     }
 }
